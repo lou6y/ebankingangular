@@ -23,6 +23,14 @@ import { ProjectsDetailsComponent } from './components/pages/projects-details/pr
 import { ServicesComponent } from './components/pages/services/services.component';
 import { ServicesDetailsComponent } from './components/pages/services-details/services-details.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import {ProfileComponent} from "./components/pages/profile/profile.component";
+import {ForgetpasswordComponent} from "./components/pages/forgetpassword/forgetpassword.component";
+import {ResetpasswordComponent} from "./components/pages/resetpassword/resetpassword.component";
+import {StockComponent} from "./components/pages/stock/stock.component";
+import {InvestmentsComponent} from "./components/pages/investments/investments.component";
+import {SellstockComponent} from "./components/pages/sellstock/sellstock.component";
+import {BuystockComponent} from "./components/pages/buystock/buystock.component";
+import {SaccountComponent} from "./components/pages/saccount/saccount.component";
 
 const routes: Routes = [
     {path: '', component: SaasHomeComponent},
@@ -39,6 +47,14 @@ const routes: Routes = [
     {path: 'pricing', component: PricingComponent},
     {path: 'login', component: LoginComponent},
     {path: 'signup', component: SignupComponent},
+    {path: 'forgetpassword', component: ForgetpasswordComponent},
+    {path: 'resetpassword', component: ResetpasswordComponent},
+    {path: 'profile', component: ProfileComponent},
+    {path: 'stock', component: StockComponent},
+    {path: 'saccounts', component: SaccountComponent},
+    {path: 'investments/:saccid', component: InvestmentsComponent},
+    {path: 'sellstock', component: SellstockComponent},
+    {path: 'buystock', component: BuystockComponent},
     {path: 'error', component: ErrorComponent},
     {path: 'coming-soon', component: ComingSoonComponent},
     {path: 'products-list', component: ProductsListComponent},

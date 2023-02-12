@@ -1,0 +1,80 @@
+<app-navbar-two></app-navbar-two>
+
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>Investment</h2>
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li>Investment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="contact-area pb-100">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>List of investments</h2>
+            <p> You can invest more!</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let investment of listInvestments">
+                <div class="single-product-box">
+<div class="col-lg-12 col-md-12">
+    <div class="tab products-details-tab">
+        <ul class="tabs">
+            <li>
+                <a href="#">
+                    <div class="dot"></div>
+                    Investment n 1
+                </a>
+            </li>
+        </ul>
+        <div class="tab_content">
+            <div class="tabs_item">
+                <div class="products-details-tab-content">
+                    <div class="row align-items-center">
+                    <ul class="additional-information">
+                        <li><span>Stock:</span> {{investment.stock.symbol}} </li>
+                        <li><span>Quantity:</span> {{investment.quantity}}</li>
+                        <li><span>NetInvested:</span> {{investment.netInvested}}</li>
+                        <li><span>CurrentValue:</span> {{investment.currentValue}} </li>
+                        <li><span>NetProfit:</span>{{investment.netProfit}} </li>
+                        <li><span>NetProfitPercentage:</span> {{investment.netProfitPercentage}}</li>
+                        <li><span>AverageBuyPrice:</span> {{investment.averageBuyPrice}}</li>
+                    </ul>
+                        <div class="product-details-desc">
+                        <div class="product-add-to-cart">
+                        <div class="input-counter">
+                            <span class="minus-btn">
+                                <i class="fas fa-minus" (click)="minus()"></i>
+                            </span>
+                            <input type="number" min="1" value="{{value}}">
+                            <span class="plus-btn">
+                                <i class="fas fa-plus" (click)="plus()"></i>
+                            </span>
+                        </div>
+                        </div>
+                        </div>
+                        <a class="default-btn" (click)="Sell(investment.stock)"> Sell Stock</a>
+                        <a class="default-btn" (click)="Buy(investment.stock)"> Buy Stock</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -32,6 +32,16 @@ import { CheckoutComponent } from './components/pages/checkout/checkout.componen
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { BlogDetailsComponent } from './components/pages/blog-details/blog-details.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { ProfileComponent } from './components/pages/profile/profile.component';
+import { ForgetpasswordComponent } from './components/pages/forgetpassword/forgetpassword.component';
+import { ResetpasswordComponent } from './components/pages/resetpassword/resetpassword.component';
+import { InvestmentsComponent } from './components/pages/investments/investments.component';
+import { StockComponent } from './components/pages/stock/stock.component';
+import { SellstockComponent } from './components/pages/sellstock/sellstock.component';
+import { BuystockComponent } from './components/pages/buystock/buystock.component';
+import { SaccountComponent } from './components/pages/saccount/saccount.component';
 
 @NgModule({
   declarations: [
@@ -64,12 +74,22 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     CheckoutComponent,
     BlogComponent,
     BlogDetailsComponent,
-    ContactComponent
+    ContactComponent,
+    ProfileComponent,
+    ForgetpasswordComponent,
+    ResetpasswordComponent,
+    InvestmentsComponent,
+    StockComponent,
+    SellstockComponent,
+    BuystockComponent,
+    SaccountComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
