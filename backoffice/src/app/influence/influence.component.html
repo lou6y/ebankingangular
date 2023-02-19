@@ -1,0 +1,220 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Influence des campagnes</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="showNotification('top','right')">
+                      <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Age</label>
+                  <input type="number" class="form-control" [(ngModel)]="formObject.age">
+                </div>
+              </div>
+             
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Travail :</label>
+
+<select name="travail" [(ngModel)]="formObject.job" class="form-control">
+    <option value="">--Please choose an option--</option>
+    <option value="0">admin</option>
+    <option value="1">management</option>
+    <option value="2">blue-collar</option>
+    <option value="3">entrepreneur</option>
+    <option value="4">housemaid</option>
+    <option value="5">retried</option>
+    <option value="6">self-employed</option>
+    <option value="7">services</option>
+    <option value="8">student</option>
+    <option value="9">technician</option>
+    <option value="10">unemployed</option>
+    <option value="11">unknown</option>
+
+
+
+</select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Etat civil :</label>
+
+<select name="travail" class="form-control" [(ngModel)]="formObject.marital">
+    <option value="">--Please choose an option--</option>
+    <option value="0">Married</option>
+    <option value="1">Single</option>
+    <option value="2">Divorced</option>
+</select>
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Niveau educatif :</label>
+
+<select name="travail" class="form-control" [(ngModel)]="formObject.education">
+    <option value="">--Please choose an option--</option>
+    <option value="0">Primary</option>
+    <option value="1">Secondary</option>
+    <option value="2">Tertiary</option>
+    <option value="3">Unkown</option>
+
+</select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Crédit accordé :</label>
+
+<select name="travail" class="form-control" [(ngModel)]="formObject.default">
+    <option value="">--Please choose an option--</option>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+                </div>
+              </div>
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Solde bancaire</label>
+                  <input type="number" class="form-control" [(ngModel)]="formObject.balance">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Pret de logement :</label>
+
+<select name="travail" class="form-control" [(ngModel)]="formObject.housing">
+    <option value="">--Please choose an option--</option>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+                </div>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Contact :</label>
+
+<select name="travail" class="form-control" [(ngModel)]="formObject.contact">
+    <option value="">--Please choose an option--</option>
+    <option value="0">Cellular</option>
+    <option value="1">Phone</option>
+    <option value="2">unknoun</option>
+</select>
+                </div>
+              </div>
+
+              
+            </div>
+            <div class="row">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="email">Mois de la communication</label>
+                  <select name="travail" class="form-control"  [(ngModel)]="formObject.month">
+                    <option value="">--Please choose an option--</option>
+                   
+                   
+     
+                    <option value="4">jan</option>
+                    <option value="3">feb</option>
+                    <option value="7">mar</option>
+                    <option value="0">apr</option>
+                    <option value="8">may</option>
+                    
+                    <option value="6">jun</option>
+                    <option value="5">jul</option>
+                    <option value="1">aug</option>
+                   
+                    <option value="11">sep</option>
+            
+                    <option value="10">oct</option>
+                    <option value="9">nov</option>
+                    <option value="2">dec</option>
+                
+                </select>
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="email">Jour de la communication</label>
+                  <input type="text" class="form-control" [(ngModel)]="formObject.day">
+                </div>
+              </div>
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Durée de la communication</label>
+                  <input type="number" class="form-control" [(ngModel)]="formObject.duration">
+                </div>
+              </div>
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>pret personnel</label>
+                  <select name="travail" class="form-control" [(ngModel)]="formObject.loan">
+                    <option value="">--Please choose an option--</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Identifiant de la campagne</label>
+                  <input type="number" class="form-control"[(ngModel)]="formObject.compaign" >
+                </div>
+              </div>
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Durée les deux communication</label>
+                  <input type="number" class="form-control" [(ngModel)]="formObject.pdays" >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Nombre de contact effectués</label>
+                  <input type="number" class="form-control"  [(ngModel)]="formObject.previous">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="pet-select">Résultat de la campagne précédente :</label>
+
+<select name="travail" class="form-control"  [(ngModel)]="formObject.poutcome">
+    <option value="">--Please choose an option--</option>
+    <option value="0">failure</option>
+    <option value="1">success</option>
+    <option value="2">nonexistent</option>
+
+</select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary btn-block" >Soumettre</button>
+                  </div>
+          </form>
+
+
+          <div>{{ responseWs }}</div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
