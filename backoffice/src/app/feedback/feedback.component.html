@@ -1,0 +1,35 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Votre feedback nous intéresse</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="showNotification('top','right')">
+                      
+            <div class="row">
+              <div class="col-md-12 pl-1">
+                <div class="form-group">
+                  <label>Votre feedback</label>
+                  <textarea rows="4" cols="80" class="form-control" [(ngModel)]="formObject.consumer_complaint_narrative_mod"></textarea>
+                </div>
+              </div>
+            </div>
+           
+            
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-primary btn-block" >Soumettre</button>
+            </div>
+    </form>
+
+
+    <div>{{ responseWs }}</div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
