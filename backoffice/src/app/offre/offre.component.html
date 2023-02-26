@@ -1,0 +1,89 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="col-md-6">
+          <h4 class="card-title">Liste des offres</h4>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" (click)="openDialog()" class="btn btn-primary btn-block" >New Offre</button>
+        </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th class="text-right">
+                  Identifiant de l'offre
+                </th>
+                <th class="text-right">
+                  Nom de l'offre
+                </th>
+                <th class="text-right">
+                  Description de l'offre
+                </th>
+                <th class="text-right">
+                  Date de creation
+                  </th>
+                <th class="text-right">
+                Date de fin
+                </th>
+                <th class="text-right">
+                  Avantages
+                  </th>
+                  <th class="text-right">
+                    Caractéristique
+                    </th>
+                    <th class="text-right">
+                      Picture
+                      </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let offer of Offres">
+                  <td class="text-center">
+                    {{ offer.idOffre }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.offerName }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.description }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.creationDate }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.endDate }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.advantage }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.characteristic }}
+                  </td>
+                  <td class="text-center">
+                    {{ offer.picture }}
+                  </td>
+                  <td class="text-center">
+                    <button mat-mini-fab color="warn" (click)="openDialogEdit(offer.idOffre)"  aria-label="Example icon button with a filter list icon">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button (click)="deleteOffre(offer.idOffre,'top','right')" mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
