@@ -1,0 +1,90 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="col-md-6">
+          <h4 class="card-title">Liste des compaign</h4>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" (click)="openDialog()" class="btn btn-primary btn-block" >New compaign</button>
+        </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th class="text-right">
+                  Identifiant de compaign
+                </th>
+                <th class="text-right">
+                  compaign type
+                </th>
+                <th class="text-right">
+                    main Target
+                </th>
+                <th class="text-right">
+                    target Heart
+                  </th>
+                <th class="text-right">
+                    secondaryTarget
+                </th>
+                <th class="text-right">
+                    msgCampaign
+                  </th>
+                  <th class="text-right">
+                    support
+                    </th>
+                    <th class="text-right">
+                        reportOperations
+                      </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let compaign of compaigns">
+                  <td class="text-center">
+                    {{ compaign.idCampaign }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.campaignType }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.mainTarget }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.targetHeart }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.secondaryTarget }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.msgCampaign }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.support }}
+                  </td>
+                  <td class="text-center">
+                    {{ compaign.reportOperations }}
+                  </td>
+                  <td class="text-center">
+                    <button mat-mini-fab color="warn" (click)="openDialogEdit(compaign.idCampaign)"  aria-label="Example icon button with a filter list icon">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button (click)="deleteOffre(compaign.idCampaign)" mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
