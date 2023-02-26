@@ -1,0 +1,59 @@
+<mat-dialog-content>
+
+    <div class="row">
+<div class="col-md-6 pr-1">
+<div class="form-group">
+<label>Nom Offre</label>
+<input type="text" class="form-control" [(ngModel)]="offer.offerName">
+</div>
+</div>
+<div class="col-md-6 pr-1">
+  <div class="form-group">
+  <label>Picture</label>
+  <input type="text" class="form-control" [(ngModel)]="offer.picture">
+  </div>
+  </div>
+</div>
+  <div class="row">
+<div class="col-md-12 pr-1">
+  <div class="form-group">
+  <label>Description</label>
+  <textarea class="form-control" [(ngModel)]="offer.description"></textarea>
+  </div>
+  </div>
+</div>
+
+
+    <div class="row">
+<div class="col-md-6 pr-1">
+<div class="form-group">
+<label>Caracteristique</label>
+<input type="text" class="form-control" [(ngModel)]="offer.characteristic" >
+</div>
+</div>
+<div class="col-md-6 pr-1">
+  <div class="form-group">
+  <label>Avantages</label>
+  <input type="text" class="form-control" [(ngModel)]="offer.advantage" >
+  </div>
+  </div>
+</div>
+    <div class="row">
+<div class="col-md-6 pr-1">
+<div class="form-group">
+<label>DateDebut</label>
+<input type="date" class="form-control" id="start" [(ngModel)]="offer.creationDate">
+</div>
+</div>
+<div class="col-md-6 pr-1">
+  <div class="form-group">
+  <label>DateFin</label >
+  <input type="date" class="form-control" [(ngModel)]="offer.endDate">
+  </div>
+  </div>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Annuler</button>
+  <button mat-button (click)="submit('top','right')">Valider</button>
+</mat-dialog-actions>

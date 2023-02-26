@@ -1,0 +1,65 @@
+<mat-dialog-content>
+    
+      <div class="row">
+  <div class="col-md-6 pr-1">
+  <div class="form-group">
+    <label>campaignType</label>
+    <select name="travail"  [(ngModel)]="compaign.campaignType" class="form-control">
+      <option value="">--Please choose an option--</option>
+      <option value="Notoriety">Notoriety</option>
+      <option value="BrandImage">BrandImage</option>
+      <option value="Conversion">Conversion</option>
+  </select>
+  </div>
+  </div>
+  <div class="col-md-6 pr-1">
+    <div class="form-group">
+    <label>mainTarget</label>
+    <input type="text" class="form-control" [(ngModel)]="compaign.mainTarget">
+    </div>
+    </div>
+</div>
+   
+<div class="row">
+    <div class="col-md-6 pr-1">
+    <div class="form-group">
+    <label>targetHeart</label>
+    <input type="text" class="form-control" [(ngModel)]="compaign.targetHeart">
+    </div>
+    </div>
+    <div class="col-md-6 pr-1">
+      <div class="form-group">
+      <label>secondaryTarget</label>
+      <input type="text" class="form-control" [(ngModel)]="compaign.secondaryTarget">
+      </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 pr-1">
+    <div class="form-group">
+    <label>msgCampaign</label>
+    <input type="number" class="form-control" [(ngModel)]="compaign.msgCampaign">
+    </div>
+    </div>
+    <div class="col-md-6 pr-1">
+      <div class="form-group">
+      <label>support</label>
+      <input type="text" class="form-control" [(ngModel)]="compaign.support">
+      </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 pr-1">
+    <div class="form-group">
+    <label>reportOperations</label>
+    <input type="number" class="form-control" [(ngModel)]="compaign.reportOperations">
+    </div>
+    </div>
+ 
+  </div>
+  
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="close()">Annuler</button>
+    <button mat-button (click)="submit('top','right')">Valider</button>
+  </mat-dialog-actions>
